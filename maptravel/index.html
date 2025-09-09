@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Localhost Site</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+</head>
+<body>
+  <h1>Nah bro</h1>
+  <p>I DONT FUCKING GIVE A SHIT!</p>
+  <img src="/images/Screenshot 2025-08-06 162016.png" alt="ETS2 Navigator Image" style="max-width: 300px; height: auto;">
+
+  <h2>Background Music</h2>
+  <audio controls loop>
+    <source src="/audio/Voyage.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <h2>Leaflet Map (Bremen)</h2>
+  <div id="mapid" style="height: 600px; width: 600px;"></div>
+
+  <!-- Leaflet JavaScript -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <script>
+    // Initialize the map
+    var mymap = L.map('mapid').setView([53.0793, 8.8017], 13); // Bremen coordinates and zoom level
+
+    // Add an OpenStreetMap tile layer
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '© OpenStreetMap contributors'
+    }).addTo(mymap);
+
+    // You can add a marker for Bremen if you like
+    L.marker([53.0793, 8.8017]).addTo(mymap)
+      .bindPopup("<b>Hello from Bremen!</b><br/>This is your Leaflet map.").openPopup();
+
+    // New marker for Luxembourg City
+    L.marker([49.6080, 6.1336]).addTo(mymap)
+      .bindPopup("<b>Luxembourg City!</b><br/>A new destination.").openPopup();
+
+    // New marker for Charleroi, Belgium
+    L.marker([50.2362454, 4.2386858]).addTo(mymap)
+      .bindPopup("<b>Charleroi, Belgium!</b><br/>Another interesting spot.").openPopup();
+
+    // New marker for Delft, Netherlands
+    L.marker([52.0151010, 4.3305978]).addTo(mymap)
+      .bindPopup("<b>Delft, Netherlands!</b><br/>Another location.").openPopup();
+
+    // New marker for Salzburg, Austria
+    L.marker([47.1092034, 13.1340991]).addTo(mymap)
+      .bindPopup("<b>Salzburg, Austria!</b><br/>Yet another interesting spot.").openPopup();
+  </script>
+
+</body>
+</html>

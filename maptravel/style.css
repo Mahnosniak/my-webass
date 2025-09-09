@@ -1,0 +1,21 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+    background-image: url('/images/Screenshot 2025-08-08 123658.png'); /* Your new background image */
+    background-size: cover; /* Cover the entire area */
+    background-repeat: no-repeat; /* Prevent image repetition */
+    background-attachment: fixed; /* Keep background fixed when scrolling */
+    background-position: center center; /* Center the background image */
+}
+
+h1 {
+    color: #000000; /* Changed to black */
+}
+
+img {
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    margin-top: 20px;
+}
